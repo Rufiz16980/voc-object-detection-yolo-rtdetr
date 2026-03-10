@@ -1,0 +1,4 @@
+split,num_images,car_objects,bus_objects,bicycle_objects,motorbike_objects
+train,105,183,106,143,117
+val,22,39,24,12,43
+test,23,52,30,26,16
