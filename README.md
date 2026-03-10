@@ -74,9 +74,9 @@ Each object instance was labeled using one of the four classes.
 
 Example annotated images:
 
-Example annotated images (manual CVAT annotations):
-
-![](reports/figures/annotation_preview_grid.png)
+| Example | Example |
+|---|---|
+| ![](reports/figures/evaluation/yolo_test_predictions/01_2008_003811_pred.png) | ![](reports/figures/evaluation/yolo_test_predictions/02_2008_003680_pred.png) |
 
 Annotation statistics (train set):
 
@@ -209,13 +209,13 @@ RT-DETR:
 
 | | | |
 |---|---|---|
-| ![](reports/figures/evaluation/yolo_test_predictions/01_2008_003811_pred.png) | ![](reports/figures/evaluation/yolo_test_predictions/02_2008_003680_pred.png) | ![](reports/figures/evaluation/yolo_test_predictions/03_2008_005213_pred.png) |
+| ![](reports/figures/evaluation/yolo_test_predictions/01_2008_003811_pred.png) | ![](reports/figures/evaluation/yolo_test_predictions/02_2008_003680_pred.png) | ![](reports/figures/evaluation/yolo_test_predictions/03_2009_004630_pred.png) |
 
 ### RT-DETR predictions
 
 | | | |
 |---|---|---|
-| ![](reports/figures/evaluation/rtdetr_test_predictions/01_2008_003811_pred.png) | ![](reports/figures/evaluation/rtdetr_test_predictions/02_2008_003680_pred.png) | ![](reports/figures/evaluation/rtdetr_test_predictions/03_2008_005213_pred.png) |
+| ![](reports/figures/evaluation/rtdetr_test_predictions/01_2008_003811_pred.png) | ![](reports/figures/evaluation/rtdetr_test_predictions/02_2008_003680_pred.png) | ![](reports/figures/evaluation/rtdetr_test_predictions/03_2009_004630_pred.png) |
 
 ---
 
