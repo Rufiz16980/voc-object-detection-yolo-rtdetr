@@ -1,0 +1,9 @@
+path: F:\Projects\Object_Detection_Computer_Vision\data
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: car
+  1: bus
+  2: bicycle
+  3: motorbike

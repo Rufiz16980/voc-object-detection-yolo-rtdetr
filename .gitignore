@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+data/raw/
+data/interim/
+data/cvat_exports/
+reports/
+*.pt
+*.pth
+Thumbs.db
+.DS_Store
+*.zip
+
+# Agent Documentation
+agent_documentation/general_plan.md
+agent_documentation/REQUIRMENTS.md

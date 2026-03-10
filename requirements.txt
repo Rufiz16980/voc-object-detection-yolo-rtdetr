@@ -1,0 +1,17 @@
+jupyter
+ipykernel
+pandas
+numpy
+matplotlib
+pillow
+lxml
+PyYAML
+scikit-learn
+tqdm
+opencv-python
+kaggle
+
+ultralytics
+torch
+torchvision
+torchaudio
