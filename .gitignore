@@ -5,7 +5,6 @@ __pycache__/
 data/raw/
 data/interim/
 data/cvat_exports/
-*.pt
 *.pth
 Thumbs.db
 .DS_Store
