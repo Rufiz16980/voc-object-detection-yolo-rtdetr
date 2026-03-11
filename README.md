@@ -1,4 +1,4 @@
-# Urban Object Detection — VOC Fine-Tuned Models
+# Urban Object Detection - VOC Fine-Tuned Models
 
 ![Python](https://img.shields.io/badge/python-3.12-blue)
 ![PyTorch](https://img.shields.io/badge/pytorch-2.0-red)
