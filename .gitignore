@@ -4,7 +4,6 @@ __pycache__/
 .ipynb_checkpoints/
 data/raw/
 data/interim/
-data/cvat_exports/
 *.pth
 Thumbs.db
 .DS_Store
