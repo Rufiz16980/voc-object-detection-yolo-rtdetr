@@ -39,6 +39,26 @@ The workflow includes:
 
 ---
 
+## Setup
+
+The project is structured around five sequential Jupyter Notebooks.
+
+**Local Execution:**
+* `01_data_prep.ipynb`
+* `03_evaluation.ipynb`
+
+**Google Colab Execution:**
+* `02_training_yolov8n.ipynb`
+* `02_training_rtdetr.ipynb`
+* `03_gpu_evaluation.ipynb`
+
+Specific setup instructions, hardware requirements, and Google Drive mounting steps are provided at the very top of each respective notebook.
+
+**Dependencies:**
+General project dependencies are listed in `requirements.txt`. A complete, strict snapshot of the local virtual environment (generated via `pip freeze`) is provided in `version_requirements.txt`. *Note: The strict snapshot contains Windows-specific packages; if you are evaluating on a different operating system, please use the standard `requirements.txt` to avoid compatibility issues.*
+
+---
+
 ## Dataset
 
 Source dataset:
@@ -76,6 +96,8 @@ Example annotated images (manual CVAT annotations):
 
 ![](reports/figures/annotation_preview_grid.png)
 
+In total, **150 images** were manually annotated.
+
 Annotation statistics (train set):
 
 | Class | Count |
@@ -84,6 +106,8 @@ Annotation statistics (train set):
 | bus | >= 25 |
 | bicycle | >= 25 |
 | motorbike | >= 25 |
+
+*Note: The grid above shows just a small sample of the manual annotations to avoid cluttering this document. The full set of annotated examples can be found in the corresponding repository folders and visualization notebooks.*
 
 ---
 
@@ -217,6 +241,7 @@ RT-DETR:
 |---|---|---|
 | ![RT-DETR prediction 1](reports/figures/evaluation/rtdetr_test_predictions/01_2007_004033_pred.png) | ![RT-DETR prediction 2](reports/figures/evaluation/rtdetr_test_predictions/02_2007_005759_pred.png) | ![RT-DETR prediction 3](reports/figures/evaluation/rtdetr_test_predictions/03_2007_009322_pred.png) |
 
+*Note: Only a small subset of predictions is shown here to avoid cluttering the README. The predictions for all test images are saved in the `reports/figures/evaluation/` directory and can be explored in detail within the evaluation notebook.*
 ---
 
 ## Discussion
@@ -420,6 +445,10 @@ voc-object-detection-yolo-rtdetr/
 Documentation of AI assistance used during development, as well as additional documentation with the issues faced during the project, is available in:
 
 `agent_documentation/llm_usage.md`
+
+## Future Work
+
+Given more time, several improvements could be made to this pipeline, including hyperparameter optimization, evaluating larger model architectures (YOLOv8s, RT-DETR-x), and applying more aggressive data augmentations (MixUp, CutMix). These potential improvements were explored and discussed during the AI-assisted planning phase but were ultimately deemed too advanced for the initial scope, timeframe, and hardware constraints of this assignment. Full details are documented in the `llm_usage.md` file.
 
 ---
 
