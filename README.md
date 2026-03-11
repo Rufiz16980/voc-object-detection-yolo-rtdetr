@@ -156,10 +156,12 @@ This metric is stricter and reflects localization quality.
 
 Summary metrics computed on the **test set**.
 
-| Model | mAP@0.5 | mAP@0.5:0.95 | Precision | Recall |
-|---|---|---|---|---|
-| YOLOv8n | 0.666 | 0.400 | 0.742 | 0.563 |
-| RT-DETR-l | 0.137 | 0.065 | 0.320 | 0.473 |
+| Model | mAP@0.5 | mAP@0.5:0.95 | Precision | Recall | Inference (ms/img) |
+|---|---|---|---|---|---|
+| YOLOv8n | 0.666 | 0.400 | 0.742 | 0.563 | 26.64 ± 3.40 |
+| RT-DETR-l | 0.137 | 0.065 | 0.320 | 0.473 | 64.13 ± 2.16 |
+
+*Note: Inference speed was benchmarked on a Google Colab T4 GPU, averaged over 20 test images at 640x640 resolution.*
 
 Detailed per-class results are available in:
 
@@ -346,22 +348,23 @@ voc-object-detection-yolo-rtdetr/
 ├── artifacts/
 ├── data/
 ├── notebooks/
-│   ├── 01_data_prep.ipynb
-│   ├── 02_training_yolov8n.ipynb
-│   ├── 02_training_rtdetr.ipynb
-│   └── 03_evaluation.ipynb
+│   ├── 01_data_prep.ipynb
+│   ├── 02_training_yolov8n.ipynb // made for colab
+│   ├── 02_training_rtdetr.ipynb // made for colab
+│   ├── 03_evaluation.ipynb
+│   └── 03_gpu_evaluation.ipynb // made for colab
 ├── reports/
-│   ├── figures/
-│   └── tables/
+│   ├── figures/
+│   └── tables/
 ├── src/
-│   ├── config.py
-│   ├── cvat_io.py
-│   ├── make_bundle.py
-│   ├── sampling.py
-│   ├── splits.py
-│   ├── utils.py
-│   ├── validation.py
-│   └── voc.py
+│   ├── config.py
+│   ├── cvat_io.py
+│   ├── make_bundle.py
+│   ├── sampling.py
+│   ├── splits.py
+│   ├── utils.py
+│   ├── validation.py
+│   └── voc.py
 ├── .gitignore
 ├── bundle_manifest.txt
 ├── README.md
@@ -382,6 +385,9 @@ voc-object-detection-yolo-rtdetr/
 * **`02_training_yolov8n.ipynb`** — fine-tuning and checkpointed training for YOLOv8n.
 * **`02_training_rtdetr.ipynb`** — fine-tuning and checkpointed training for RT-DETR-l.
 * **`03_evaluation.ipynb`** — test-set evaluation, metric aggregation, qualitative comparison, and visualization generation.
+* **`03_gpu_evaluation.ipynb`** — dedicated execution for GPU inference benchmarking and timing extraction.
+
+*Note: **`02_training_yolov8n.ipynb`**, **`02_training_rtdetr.ipynb`**, and **`03_gpu_evaluation.ipynb`** notebooks were meant to be run in Google Colab; the required set-up for those notebooks is also mentioned in their corresponding Markdown cells.*
 
 ### Key source modules
 * **`config.py`** — project-wide paths, constants, and configuration values.
@@ -392,6 +398,8 @@ voc-object-detection-yolo-rtdetr/
 * **`validation.py`** — dataset integrity checks and summary utilities.
 * **`utils.py`** — shared helper functions for file and metadata operations.
 * **`make_bundle.py`** — minimal dataset bundle creation for Colab-based training.
+
+
 
 ---
 
