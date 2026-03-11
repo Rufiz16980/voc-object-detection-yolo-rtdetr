@@ -372,32 +372,32 @@ voc-object-detection-yolo-rtdetr/
 ```
 
 ### Directory overview
-* **`agent_documentation/`** — planning notes, requirement references, and development documentation.
-* **`artifacts/`** — saved model outputs, plots, training logs, and exported experiment artifacts.
-* **`data/`** — final dataset used for training and evaluation, including images, labels, and dataset configuration.
-* **`notebooks/`** — end-to-end notebooks for data preparation, model training, and evaluation.
-* **`reports/figures/`** — generated visual outputs such as training curves, PR curves, confusion matrices, and prediction examples.
-* **`reports/tables/`** — saved metric tables and evaluation summaries.
-* **`src/`** — reusable helper modules for dataset parsing, CVAT import, sampling, splitting, validation, and packaging.
+* **`agent_documentation/`** - planning notes, requirement references, and development documentation.
+* **`artifacts/`** - saved model outputs, plots, training logs, and exported experiment artifacts.
+* **`data/`** - final dataset used for training and evaluation, including images, labels, and dataset configuration.
+* **`notebooks/`** - end-to-end notebooks for data preparation, model training, and evaluation.
+* **`reports/figures/`** - generated visual outputs such as training curves, PR curves, confusion matrices, and prediction examples.
+* **`reports/tables/`** - saved metric tables and evaluation summaries.
+* **`src/`** - reusable helper modules for dataset parsing, CVAT import, sampling, splitting, validation, and packaging.
 
 ### Key notebook roles
-* **`01_data_prep.ipynb`** — dataset filtering, subset selection, CVAT integration, split creation, and final dataset export.
-* **`02_training_yolov8n.ipynb`** — fine-tuning and checkpointed training for YOLOv8n.
-* **`02_training_rtdetr.ipynb`** — fine-tuning and checkpointed training for RT-DETR-l.
-* **`03_evaluation.ipynb`** — test-set evaluation, metric aggregation, qualitative comparison, and visualization generation.
-* **`03_gpu_evaluation.ipynb`** — dedicated execution for GPU inference benchmarking and timing extraction.
+* **`01_data_prep.ipynb`** - dataset filtering, subset selection, CVAT integration, split creation, and final dataset export.
+* **`02_training_yolov8n.ipynb`** - fine-tuning and checkpointed training for YOLOv8n.
+* **`02_training_rtdetr.ipynb`** - fine-tuning and checkpointed training for RT-DETR-l.
+* **`03_evaluation.ipynb`** - test-set evaluation, metric aggregation, qualitative comparison, and visualization generation.
+* **`03_gpu_evaluation.ipynb`** - dedicated execution for GPU inference benchmarking and timing extraction.
 
 *Note: **`02_training_yolov8n.ipynb`**, **`02_training_rtdetr.ipynb`**, and **`03_gpu_evaluation.ipynb`** notebooks were meant to be run in Google Colab; the required set-up for those notebooks is also mentioned in their corresponding Markdown cells.*
 
 ### Key source modules
-* **`config.py`** — project-wide paths, constants, and configuration values.
-* **`voc.py`** — parsing and summarizing PASCAL VOC annotations.
-* **`sampling.py`** — balanced subset selection for manual annotation.
-* **`cvat_io.py`** — CVAT export parsing and label attachment logic.
-* **`splits.py`** — deterministic train/validation/test split generation.
-* **`validation.py`** — dataset integrity checks and summary utilities.
-* **`utils.py`** — shared helper functions for file and metadata operations.
-* **`make_bundle.py`** — minimal dataset bundle creation for Colab-based training.
+* **`config.py`** - project-wide paths, constants, and configuration values.
+* **`voc.py`** - parsing and summarizing PASCAL VOC annotations.
+* **`sampling.py`** - balanced subset selection for manual annotation.
+* **`cvat_io.py`** - CVAT export parsing and label attachment logic.
+* **`splits.py`** - deterministic train/validation/test split generation.
+* **`validation.py`** - dataset integrity checks and summary utilities.
+* **`utils.py`** - shared helper functions for file and metadata operations.
+* **`make_bundle.py`** - minimal dataset bundle creation for Colab-based training.
 
 
 
@@ -417,7 +417,7 @@ voc-object-detection-yolo-rtdetr/
 
 ## LLM Usage
 
-Documentation of AI assistance used during development is available in:
+Documentation of AI assistance used during development, as well as additional documentation with the issues faced during the project, is available in:
 
 `agent_documentation/llm_usage.md`
 
